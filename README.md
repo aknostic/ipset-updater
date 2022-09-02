@@ -7,9 +7,9 @@ This module can help when using WAF, for example for whitelisting access to your
 
 This module is partly inspired in [this](https://aws.amazon.com/blogs/security/automatically-update-aws-waf-ip-sets-with-aws-ip-ranges/) solution, which instead of Terraform uses a Cloudformation template to create a lambda function and update IP Sets with updated AWS services endpoints.
 
-##Overview
+## Overview
 
-![module resources](drawing/WAF-IPset-automatic-updating.drawio.png?raw=true)
+![module resources](drawings/WAF-IPset-automatic-updating.drawio.png?raw=true)
 
 The Terraform module creates a Cloudwatch event rule which will trigger a lambda function every x number of minutes (30 by default).
 The IP Set to be updated is configured as well, it's NOT created by the module.
@@ -17,7 +17,7 @@ The IP Set to be updated is configured as well, it's NOT created by the module.
 The lambda function is written in python and the code is in `code/lambda_function.py`.
 
 
-##Usage
+## Usage
 
 1. Create an IP Set and associate it to your WAF Web ACL. This IP Set will contain the IP addresses associated to the domains you want to whitelist.
 
