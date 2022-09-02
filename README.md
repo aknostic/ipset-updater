@@ -9,7 +9,7 @@ This module is partly inspired in [this](https://aws.amazon.com/blogs/security/a
 
 ##Overview
 
-![module resources](https://github.com/aknostic/ipset-updater/blob/main/WAF-IPset-automatic-updating.drawio.png?raw=true)
+![module resources](drawing/WAF-IPset-automatic-updating.drawio.png?raw=true)
 
 The Terraform module creates a Cloudwatch event rule which will trigger a lambda function every x number of minutes (30 by default).
 The IP Set to be updated is configured as well, it's NOT created by the module.
