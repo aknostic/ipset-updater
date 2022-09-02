@@ -1,6 +1,5 @@
 ## Permissions
 data "aws_iam_policy_document" "lambda_assume_role_policy"{
-  # TODO missing permissions for cloudwatch logs
   statement {
     effect  = "Allow"
     actions = ["sts:AssumeRole"]
